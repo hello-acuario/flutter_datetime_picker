@@ -28,21 +28,21 @@ class DatePicker {
     DateTime currentTime,
     DatePickerTheme theme,
   }) async {
-    return await Navigator.push(
-        context,
-        new _DatePickerRoute(
-            showTitleActions: showTitleActions,
-            onChanged: onChanged,
-            onConfirm: onConfirm,
-            locale: locale,
-            theme: theme,
-            barrierLabel:
-                MaterialLocalizations.of(context).modalBarrierDismissLabel,
-            pickerModel: DatePickerModel(
-                currentTime: currentTime,
-                maxTime: maxTime,
-                minTime: minTime,
-                locale: locale)));
+    return await Navigator.of(context, rootNavigator: true).push(
+      new _DatePickerRoute(
+        showTitleActions: showTitleActions,
+        onChanged: onChanged,
+        onConfirm: onConfirm,
+        locale: locale,
+        theme: theme,
+        barrierLabel:
+        MaterialLocalizations.of(context).modalBarrierDismissLabel,
+        pickerModel: DatePickerModel(
+          currentTime: currentTime,
+          maxTime: maxTime,
+          minTime: minTime,
+          locale: locale))
+    );
   }
 
   ///
@@ -57,18 +57,18 @@ class DatePicker {
     DateTime currentTime,
     DatePickerTheme theme,
   }) async {
-    return await Navigator.push(
-        context,
-        new _DatePickerRoute(
-            showTitleActions: showTitleActions,
-            onChanged: onChanged,
-            onConfirm: onConfirm,
-            locale: locale,
-            theme: theme,
-            barrierLabel:
-                MaterialLocalizations.of(context).modalBarrierDismissLabel,
-            pickerModel:
-                TimePickerModel(currentTime: currentTime, locale: locale)));
+    return await Navigator.of(context, rootNavigator: true).push(
+      new _DatePickerRoute(
+        showTitleActions: showTitleActions,
+        onChanged: onChanged,
+        onConfirm: onConfirm,
+        locale: locale,
+        theme: theme,
+        barrierLabel:
+        MaterialLocalizations.of(context).modalBarrierDismissLabel,
+        pickerModel:
+        TimePickerModel(currentTime: currentTime, locale: locale))
+    );
   }
 
   ///
@@ -83,18 +83,18 @@ class DatePicker {
     DateTime currentTime,
     DatePickerTheme theme,
   }) async {
-    return await Navigator.push(
-        context,
-        new _DatePickerRoute(
-            showTitleActions: showTitleActions,
-            onChanged: onChanged,
-            onConfirm: onConfirm,
-            locale: locale,
-            theme: theme,
-            barrierLabel:
-                MaterialLocalizations.of(context).modalBarrierDismissLabel,
-            pickerModel:
-                DateTimePickerModel(currentTime: currentTime, locale: locale)));
+    return await Navigator.of(context, rootNavigator: true).push(
+      new _DatePickerRoute(
+        showTitleActions: showTitleActions,
+        onChanged: onChanged,
+        onConfirm: onConfirm,
+        locale: locale,
+        theme: theme,
+        barrierLabel:
+        MaterialLocalizations.of(context).modalBarrierDismissLabel,
+        pickerModel:
+        DateTimePickerModel(currentTime: currentTime, locale: locale))
+    );
   }
 
   ///
@@ -109,17 +109,17 @@ class DatePicker {
     BasePickerModel pickerModel,
     DatePickerTheme theme,
   }) async {
-    return await Navigator.push(
-        context,
-        new _DatePickerRoute(
-            showTitleActions: showTitleActions,
-            onChanged: onChanged,
-            onConfirm: onConfirm,
-            locale: locale,
-            theme: theme,
-            barrierLabel:
-                MaterialLocalizations.of(context).modalBarrierDismissLabel,
-            pickerModel: pickerModel));
+    return await Navigator.of(context, rootNavigator: true).push(
+      new _DatePickerRoute(
+        showTitleActions: showTitleActions,
+        onChanged: onChanged,
+        onConfirm: onConfirm,
+        locale: locale,
+        theme: theme,
+        barrierLabel:
+        MaterialLocalizations.of(context).modalBarrierDismissLabel,
+        pickerModel: pickerModel)
+    );
   }
 }
 
